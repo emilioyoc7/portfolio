@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import Social from "../components/Social.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import UpWork from "../components/icons/UpWork.astro";
+import Experince from "../components/Experince.astro";
+import Container from "../components/Container.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+	title="Porfolio emilio - Desarrollador y Programador Web"
+	description="Como programador web, traigo habilidades sólidas en HTML, CSS y JavaScript, junto con experiencia en el desarrollo de sitios web y aplicaciones responsivas. Mi capacidad para colaborar efectivamente y mi compromiso con la calidad aseguran resultados excepcionales. Estoy ansioso por contribuir al éxito de su equipo y aprender continuamente para impulsar proyectos innovadores."
+>
+	<main class="px-2">
+		<Container id="inicio" class="py-28 pb-20">
+			<h1
+				class="text-white text-2xl lg:text-5xl font-bold flex justify-center flex-row gap-x-4 pb-4 lg:pb-10"
+			>
+				Hey, soy emilio
+				<div class="flex justify-center items-center">
+					<a href="https://www.linkedin.com/in/emilio-yoc-84308b286/">
+						<Badge>Disponible para trabajar</Badge>
+					</a>
+				</div>
+			</h1>
+			<nav class="flex gap-x-2 mt-20 justify-center">
+				<Social href="https://www.linkedin.com/in/emilio-yoc-84308b286/">
+					<LinkedInIcon class="size-6" />
+				</Social>
+				<Social href="https://github.com/emilioyoc7">
+					<GitHub class="size-6" />
+				</Social>
+				<Social href="https://www.upwork.com/freelancers/~010ecdf337d8fa1f89">
+					<UpWork class="size-6" />
+				</Social>
+			</nav>
+		</Container>
+		<Container class="mt-10" id="experiencia">
+			<h2
+				class="opacity-70 flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white dark:text-white"
+			>
+				Proyectos personales
+			</h2>
+			<Experince />
+		</Container>
+		<Container>
+			<Projects />
+		</Container>
+	</main>
+</Layout>
