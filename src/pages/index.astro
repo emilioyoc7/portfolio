@@ -15,7 +15,12 @@ import Projects from "../components/Projects.astro";
 	description="Como programador web, traigo habilidades sólidas en HTML, CSS y JavaScript, junto con experiencia en el desarrollo de sitios web y aplicaciones responsivas. Mi capacidad para colaborar efectivamente y mi compromiso con la calidad aseguran resultados excepcionales. Estoy ansioso por contribuir al éxito de su equipo y aprender continuamente para impulsar proyectos innovadores."
 >
 	<main class="px-2">
-		<Container id="inicio" class="py-28 pb-20">
+		<Container id="inicio" class="py-28 pb-20 mt-16">
+			<img
+				class="rounded w-32 h-44"
+				src="../../public/emi.webp"
+				alt="emi foto"
+			/>
 			<h1
 				class="text-white text-2xl lg:text-5xl font-bold flex justify-center flex-row gap-x-4 pb-4 lg:pb-10"
 			>
@@ -26,6 +31,18 @@ import Projects from "../components/Projects.astro";
 					</a>
 				</div>
 			</h1>
+			<p
+				class="mt-6 text-xl text-gray-300 [&>strong]:text-blue-500 [&>strong]:font-semibold"
+			>
+				¡Hola! Soy Emilio, un individuo motivado y entusiasta en busca de
+				oportunidades laborales. <strong
+					>Aunque carezco de experiencia previa, estoy lleno de determinación
+					para aprender y crecer.
+				</strong>Soy comprometido, adaptable y tengo habilidades como la
+				comunicación efectiva y el trabajo en equipo. Estoy emocionado por la
+				oportunidad de demostrar mi valía y contribuir al éxito de su equipo.
+				¡Gracias por considerar mi solicitud!
+			</p>
 			<nav class="flex gap-x-2 mt-20 justify-center">
 				<Social href="https://www.linkedin.com/in/emilio-yoc-84308b286/">
 					<LinkedInIcon class="size-6" />
@@ -38,15 +55,20 @@ import Projects from "../components/Projects.astro";
 				</Social>
 			</nav>
 		</Container>
-		<Container class="mt-10" id="experiencia">
+		<Container class="mt-10" id="sobre-mi">
 			<h2
-				class="opacity-70 flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white dark:text-white"
+				class="opacity-70 flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white dark:text-white ml-14"
 			>
-				Proyectos personales
+				Sobre mi :
 			</h2>
 			<Experince />
 		</Container>
-		<Container>
+		<Container class="py-28 pb-20 mt-12" id="proyectos">
+			<h2
+				class="opacity-70 flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white dark:text-white"
+			>
+				Proyectos :
+			</h2>
 			<Projects />
 		</Container>
 	</main>

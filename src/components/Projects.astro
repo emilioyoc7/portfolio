@@ -1,49 +1,38 @@
 ---
-import NextJS from "./icons/NextJS.astro";
-import Tailwind from "./icons/Tailwind.astro";
+import React from "./icons/React.astro";
+import Vite from "./icons/Vite.astro";
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
+  REACT: {
+    name: "React",
     class: "bg-black text-white",
-    icon: NextJS,
+    icon: React,
   },
-  TAILWIND: {
-    name: "Tailwind CSS",
+  VITE: {
+    name: "Vite",
     class: "bg-[#003159] text-white",
-    icon: Tailwind,
+    icon: Vite,
   },
 };
 
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
-    description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "../../public/41shots_so.jpg",
-    github: "https://github.com/pheralb/svgl",
+    title: "IMBD - Buscador de peliculas",
+    description: "buscador de peliculas, utilizando una API, React + Vite",
     image: "../../public/41shots_so.jpg",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.REACT, TAGS.VITE],
   },
 ];
 ---
 
 {
-  PROJECTS.map(({ title, description, link, github, image, tags }) => (
+  PROJECTS.map(({ title, description, image, tags }) => (
     <article>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <ul class="flex flex-row mb-2 gap-x-2">
+      <h3 class="text-green-600 text-lg">{title}</h3>
+      <p class="text-gray-400 mt-6">{description}</p>
+      <ul class="flex flex-row mb-2 gap-x-2 mt-6">
         {tags.map((tag) => (
-          <li>
+          <li class="">
             <span
               class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
             >
@@ -53,7 +42,7 @@ const PROJECTS = [
           </li>
         ))}
       </ul>
-      <img class="" src={image} alt="cap proyecto" />
+      <img class="rounded-md" src={image} alt="cap proyecto" />
     </article>
   ))
 }
